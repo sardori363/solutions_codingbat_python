@@ -110,7 +110,64 @@ def first_half(str):
   return str[:len(str)/2]
 
 '''
-                                            
+                                            WITHOUT_END
+
+
+Given a string, return a version without the first and last char, so "Hello" yields "ell". The
+string length will be at least 2.
+
+
+without_end('Hello') → 'ell'
+without_end('java') → 'av'
+without_end('coding') → 'odin'
+'''
+
+def without_end(str):
+  return str[1:-1]
+
+''' 
+                                            COMBO_STRING
+
+Given 2 strings, a and b, return a string of the form short+long+short, with the shorter
+ string on the outside and the longer string on the inside. The strings will not be the same
+ length, but they may be empty (length 0).
+
+
+combo_string('Hello', 'hi') → 'hiHellohi'
+combo_string('hi', 'Hello') → 'hiHellohi'
+combo_string('aaa', 'b') → 'baaab'
+'''
+
+def combo_string(a, b):
+  return a+b+a if len(a)<len(b) else b+a+b
+
+'''
+                                            NON_START
+
+Given 2 strings, return their concatenation, except omit the first char of each. The strings will be at least length 1.
+
+
+non_start('Hello', 'There') → 'ellohere'
+non_start('java', 'code') → 'avaode'
+non_start('shotl', 'java') → 'hotlava'
+'''
+
+def non_start(a, b):
+  return a[1:] + b[1:]
 
 
 '''
+                                              LEFT2
+
+
+Given a string, return a "rotated left 2" version where the first 2 chars are moved to the
+end. The string length will be at least 2.
+
+
+left2('Hello') → 'lloHe'
+left2('java') → 'vaja'
+left2('Hi') → 'Hi'
+'''
+
+def left2(str):
+  return str[2:]+str[:2]
