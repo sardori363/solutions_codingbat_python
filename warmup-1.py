@@ -11,13 +11,15 @@ sleep_in(True, False) → False
 sleep_in(False, True) → True
 '''
 
+
 def sleep_in(weekday, vacation):
-  if not weekday:
-    print(True)
-  elif vacation:
-    print(True)
-  else:
-    print(False)
+    if not weekday:
+        print(True)
+    elif vacation:
+        print(True)
+    else:
+        print(False)
+
 
 '''
                                             MONKEY_TROUBLE
@@ -32,11 +34,13 @@ monkey_trouble(False, False) → True
 monkey_trouble(True, False) → False
 '''
 
+
 def monkey_trouble(a_smile, b_smile):
-  if a_smile and b_smile or not a_smile and not b_smile:
-    return True
-  else:
-    return False
+    if a_smile and b_smile or not a_smile and not b_smile:
+        return True
+    else:
+        return False
+
 
 '''
                                             SUM_DOUBLE
@@ -63,11 +67,13 @@ diff21(10) → 11
 diff21(21) → 0
 '''
 
+
 def diff21(n):
-  if n>21:
-    return (n-21)*2
-  else:
-    return 21-n
+    if n > 21:
+        return (n - 21) * 2
+    else:
+        return 21 - n
+
 
 '''
                                             PARROT_TROUBLE
@@ -83,11 +89,13 @@ parrot_trouble(True, 7) → False
 parrot_trouble(False, 6) → False
 '''
 
+
 def parrot_trouble(talking, hour):
-    if talking and hour<7 or talking and hour>20:
-      return True
+    if talking and hour < 7 or talking and hour > 20:
+        return True
     else:
-      return False
+        return False
+
 
 '''
                                             MAKES10
@@ -101,8 +109,10 @@ makes10(9, 9) → False
 makes10(1, 9) → True
 '''
 
+
 def makes10(a, b):
-  return (a==10 or b== 10 or a+b==10)
+    return (a == 10 or b == 10 or a + b == 10)
+
 
 '''
                                             NEAR_HUNDRED
@@ -116,8 +126,10 @@ near_hundred(90) → True
 near_hundred(89) → False
 '''
 
+
 def near_hundred(n):
-  return((abs(100-n) <=10) or (abs(200-n) <=10))
+    return ((abs(100 - n) <= 10) or (abs(200 - n) <= 10))
+
 
 '''
                                             POS_NEG
@@ -132,8 +144,10 @@ pos_neg(-1, 1, False) → True
 pos_neg(-4, -5, True) → True
 '''
 
+
 def pos_neg(a, b, negative):
-  return (a<0 and b>0 and not negative or a>0 and b<0 and not negative or a<0 and b<0 and negative)
+    return (a < 0 and b > 0 and not negative or a > 0 and b < 0 and not negative or a < 0 and b < 0 and negative)
+
 
 '''
                                             NOT_STRING
@@ -148,10 +162,12 @@ not_string('x') → 'not x'
 not_string('not bad') → 'not bad'
 '''
 
+
 def not_string(str):
-  if len(str) >= 3 and str[:3] == "not":
-    return str
-  return "not " + str
+    if len(str) >= 3 and str[:3] == "not":
+        return str
+    return "not " + str
+
 
 '''
                                             MISSING_CHAR
@@ -167,8 +183,10 @@ missing_char('kitten', 0) → 'itten'
 missing_char('kitten', 4) → 'kittn'
 '''
 
+
 def missing_char(str, n):
-  return str[:n] + str[n+1:]
+    return str[:n] + str[n + 1:]
+
 
 '''
                                             FRONT_BACK
@@ -182,14 +200,16 @@ front_back('a') → 'a'
 front_back('ab') → 'ba'
 '''
 
+
 def front_back(str):
-  if len(str)<2:
-    return str
-  else:
-    s1 = str[:1]
-    s2 = str[1:-1]
-    s3 = str[-1]
-    return s3+s2+s1
+    if len(str) < 2:
+        return str
+    else:
+        s1 = str[:1]
+        s2 = str[1:-1]
+        s3 = str[-1]
+        return s3 + s2 + s1
+
 
 '''
                                             FRONT3
@@ -204,6 +224,14 @@ front3('Chocolate') → 'ChoChoCho'
 front3('abc') → 'abcabcabc'
 '''
 
-def front3(str):
-  s = str[:3]
-  return s+s+s
+
+def array_front9(nums):
+    counter = 0
+    lst = []
+    for i in range(0, 4):
+        lst.append(nums[i])
+        counter = lst.count(9)
+    print(counter)
+
+
+array_front9([1, 9, 9])
